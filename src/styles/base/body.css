@@ -1,0 +1,17 @@
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(30, 30, 30, 0.6) #fff;
+}
+
+::selection {
+  color: white;
+  background-color: #46AD40;
+}
+
+body {
+  background-color: #ebebeb;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*# sourceMappingURL=body.css.map */

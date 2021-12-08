@@ -1,0 +1,30 @@
+@use '../helpers'as h;
+
+// booking
+.booking-container {
+    @include h.flexcenter;
+    height: 450px;
+    background-image: url(../images/homepage/hero-image2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 6em;
+
+
+}
+
+.booking {
+    color: h.$light;
+    text-align: center;
+
+    &__title {
+
+        font-family: h.$cursive;
+        font-size: clamp(1rem, 10vw, 3.5rem);
+    }
+
+    &__content {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        margin-bottom: 1.5em;
+    }
+}

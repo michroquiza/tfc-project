@@ -1,0 +1,63 @@
+@use '../helpers'as h;
+
+// menu
+.menu__title {
+    @include h.main-title;
+    color: h.$dark;
+    margin: 1em 0 -0.4em 0;
+}
+
+// navigation for food menu
+.navmenu {
+
+    &__list {
+        padding: 0;
+        list-style-type: none;
+        @include h.flexcenter;
+        flex-wrap: wrap;
+        margin-bottom: 3em;
+    }
+
+    &__link {
+        display: block;
+        color: h.$dark;
+        text-decoration: none;
+        text-align: center;
+        font-weight: h.$semibold;
+        letter-spacing: 0.05rem;
+        height: 3.4em;
+        line-height: 3.4em;
+        padding: 0 1.35em;
+        white-space: nowrap;
+        border-radius: 0.2em;
+
+        &:hover {
+            color: h.$dark;
+            background-color: h.$hover;
+            transition: h.$transition4s;
+        }
+
+        @include h.responsive(mobile) {
+            font-size: 1rem;
+        }
+    }
+
+    .active {
+        color: h.$light;
+        text-decoration: none;
+        background-color: h.$dark;
+        border-radius: 0.2em;
+    }
+
+
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

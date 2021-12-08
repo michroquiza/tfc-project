@@ -1,0 +1,43 @@
+@use '../helpers'as h;
+
+// hero
+.hero-wrapper {
+    @include h.flexcenter;
+    height: 578.7px;
+    background-image: url(../images/homepage/hero-image.png);
+    margin: 0 auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero {
+    color: h.$light;
+    text-align: center;
+    margin-bottom: 0;
+
+    &__title {
+        font-family: h.$cursive;
+        font-size: clamp(2.5rem, 10vw, 5rem);
+        // font-size: 4.375rem;
+        letter-spacing: 0.125rem;
+        margin: 0 auto;
+
+        @include h.responsive(mobile) {
+            font-size: 3rem;
+
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.6rem;
+        color: #aaaaaa;
+        letter-spacing: 0.3rem;
+        margin-top: -0.1em;
+
+        @include h.responsive(mobile) {
+            font-size: 1rem;
+
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use '../helpers'as h;
+
+
+// header and navigation
+header {
+    background: h.$dark;
+    color: h.$white;
+
+    .container {
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .logo {
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        left: 3.9em;
+    }
+
+    @include h.responsive(mobile) {
+
+        .logo {
+            height: 90px;
+            top: 0.2rem;
+            left: 1rem;
+        }
+    }
+
+}
+
+// top navigation bar
+.topnav {
+    padding: 1rem 4rem;
+    background: h.$dark;
+    color: h.$light;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        column-gap: 2em;
+    }
+
+    &__link {
+        font-weight: h.$medium;
+        color: h.$white;
+        text-decoration: none;
+
+        &:hover {
+            color: h.$green;
+            transition: h.$transition3s;
+        }
+    }
+
+    // shopping bag
+    .shopping-bag {
+        position: relative;
+        cursor: pointer;
+
+        .bag-counter {
+            color: h.$light;
+            font-size: 0.9rem;
+            font-weight: h.$bold;
+            background: h.$green;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            @include h.flexcenter;
+            position: absolute;
+            z-index: 50;
+            top: -0.9rem;
+            right: -0.5rem;
+        }
+    }
+
+    // icons for mobile responsive
+    .icons {
+        display: none;
+    }
+
+    @include h.responsive(mobile) {
+        &__list {
+            gap: 1em;
+            width: 105%;
+        }
+
+        &__item {
+            display: none;
+
+        }
+
+        .icons {
+            display: block;
+        }
+    }
+}

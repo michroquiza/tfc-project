@@ -1,0 +1,81 @@
+@use '../helpers'as h;
+
+// pop dish cards
+// .pop-dish {
+
+//     &__title {
+//         @include h.main-title;
+//         color: h.$dark;
+
+//     }
+
+//     // popular dishes cards
+//     &__cards {
+//         @include h.flexcenter;
+//         gap: 1em;
+//         flex-wrap: wrap;
+//         margin: 0 auto;
+//     }
+
+
+//     &__img {
+//         position: relative;
+
+//         width: 380px;
+//         height: 230px;
+//         object-fit: cover;
+//         border-radius: 0.3em;
+//         box-shadow: 6px 6px 10px 0px rgba(75, 75, 75, 0.2);
+//     }
+// }
+
+// menu cards
+.menu-cards {
+    @include h.flexcenter;
+    flex-wrap: wrap;
+    gap: 1em;
+
+
+    &__menu-card {
+        width: 285px;
+        height: 355px;
+        border-radius: 0.2em;
+        background: h.$white;
+        box-shadow: 5px 5px 8px 0px rgba(140, 140, 140, 0.2);
+        margin-bottom: 1em;
+        animation: fade 0.25s ease-in-out;
+
+        @include h.responsive(mobile) {
+            width: 350px;
+        }
+    }
+
+    &__img {
+        width: 285px;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 0.2em;
+        border-top-right-radius: 0.2em;
+
+        @include h.responsive(mobile) {
+            width: 350px;
+        }
+    }
+
+    &__menu-name {
+        text-align: center;
+        margin-bottom: 1.5em;
+
+    }
+
+    &__menu-info {
+        @include h.flexcenter;
+        column-gap: 6em;
+        margin-top: 3em;
+
+        @include h.responsive(mobile) {
+            column-gap: 8em;
+        }
+    }
+
+}

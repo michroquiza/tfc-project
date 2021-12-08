@@ -1,0 +1,150 @@
+@use '../helpers'as h;
+
+// side menu bag
+.side-bag__wrapper {
+    width: 35%;
+    height: 100vw;
+    background-color: h.$white;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    right: -100%;
+    color: h.$dark;
+    transition: right 0.5s ease-in-out;
+
+    @include h.responsive(mobile) {
+        width: 100%;
+        height: 100vh;
+    }
+
+    @include h.responsive(tablet) {
+        width: 100%;
+        height: 100vh;
+    }
+
+    @include h.responsive(tabtOne) {
+        width: 55%;
+        height: 100vh;
+    }
+
+    @include h.responsive(tabtTwo) {
+        width: 60%;
+        height: 100vh;
+    }
+}
+
+.side-bag {
+    position: relative;
+    margin: 0.5em 2em;
+
+    .close-styled {
+        width: 2.1em;
+        height: 2.1em;
+        border-radius: 0.15em;
+        position: absolute;
+        top: -0.5em;
+        right: 0;
+        @include h.flexcenter;
+
+        &:hover {
+            background-color: h.$graylight;
+            transition: h.$transition3s;
+        }
+    }
+
+    &__title {
+        margin: 2em 0;
+    }
+
+    &__order {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+
+    .scroll {
+        height: 250px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+
+    .order-details {
+        flex-grow: 2;
+
+        &__title {
+            font-size: 1rem;
+            font-weight: h.$semibold;
+            margin: 0;
+        }
+
+        &__quantity {
+            margin-bottom: 1em;
+        }
+
+        input {
+            display: block;
+            margin: 0.75rem 0;
+            width: 60px;
+        }
+
+    }
+
+    .order-img {
+        width: 135px;
+        height: 85px;
+        object-fit: cover;
+    }
+
+    span {
+        width: 80px;
+    }
+
+    .remove-btn {
+        font-size: 0.85rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .order-price {
+        font-weight: h.$semibold;
+    }
+
+    .separator {
+        display: inline;
+        height: 0.95rem;
+        border: 1px solid rgba(0, 0, 0, 0.60);
+        margin-right: 0.15rem;
+    }
+
+    hr {
+        border: 1px solid #DFDFDF;
+        margin-bottom: 2em;
+    }
+
+    .full-total {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.5em;
+
+        .total-title {
+            margin-left: 1em;
+        }
+
+        .del-style {
+            font-size: 1.15em;
+            white-space: nowrap;
+            margin-bottom: 0.7em;
+        }
+
+        .total-style {
+            font-size: 1.5rem;
+            font-weight: h.$semibold;
+        }
+
+    }
+}

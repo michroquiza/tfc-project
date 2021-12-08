@@ -1,0 +1,17 @@
+@use '../helpers'as h;
+
+html {
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: h.$translucentdark h.$white;
+}
+
+::selection {
+    color: white;
+    background-color: h.$green;
+}
+
+body {
+    background-color: h.$light;
+    font-family: "Montserrat", sans-serif;
+}

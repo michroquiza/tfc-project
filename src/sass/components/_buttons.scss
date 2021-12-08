@@ -1,0 +1,140 @@
+@use '../helpers'as h;
+
+// button
+.book-btn {
+    font-weight: h.$medium;
+    color: h.$white;
+    text-decoration: none;
+    background-color: h.$green;
+    padding: 0.75em 0.80em;
+    transition: h.$transition2s;
+    border: none;
+    border-radius: 0.15em;
+
+    &:hover {
+        background-color: h.$dark;
+    }
+}
+
+// checkout button
+
+
+.checkout {
+    color: h.$white;
+    font-weight: h.$medium;
+    letter-spacing: 0.05rem;
+    display: flex;
+    justify-content: center;
+    background-color: h.$dark;
+    border: none;
+    padding: 1em 6em;
+    margin: 0 auto;
+    border-radius: 0.15em;
+
+    &:hover {
+        background-color: h.$semidark;
+    }
+
+}
+
+// reserve button
+.reserve {
+    display: flex;
+    justify-content: center;
+    color: h.$light;
+    font-weight: h.$medium;
+    text-align: center;
+    justify-content: center;
+    background-color: h.$dark;
+    border: none;
+    padding: 1em 6em;
+    margin: 0 auto;
+    padding: 1em 6em;
+    margin: 0 auto;
+    border-radius: 0.15em;
+
+    &:hover {
+        background-color: h.$semidark;
+    }
+
+    @include h.responsive(mobile) {
+        padding: 1em 7em;
+    }
+}
+
+// order button
+.order-btn {
+    color: h.$white;
+    font-weight: h.$medium;
+    padding: 0.5em;
+    background-color: h.$dark;
+    border: none;
+    border-radius: 0.2em;
+    transition: h.$transition2s;
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: h.$semidark;
+    }
+}
+
+// payment method buttons
+.payment-btn {
+    background-color: h.$white;
+    border: none;
+    margin-bottom: 1.5em;
+
+    &:focus {
+        border: 1px solid h.$glowygreen;
+        box-shadow: 0 0 5px h.$glowygreen;
+    }
+
+    img {
+        width: 150px;
+        height: 80px;
+        object-fit: cover;
+    }
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    background-color: h.$dark;
+    border: none;
+    padding: 1em 9em;
+    margin: 0 auto;
+    border-radius: 0.15em;
+    color: h.$white;
+    font-weight: h.$medium;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+
+    &:hover {
+        background-color: h.$semidark;
+    }
+
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    z-index: 300;
+    right: 0.5em;
+    bottom: 1.5em;
+    border: none;
+    background: transparent;
+
+    img {
+        width: 1.8em;
+        border-radius: 0.2em;
+        background-color: h.$green;
+        border: none;
+    }
+}
+
+.shopping-bag {
+    @include h.responsive(mobile) {
+        margin-right: -1em;
+    }
+}
