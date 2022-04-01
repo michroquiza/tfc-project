@@ -5,7 +5,7 @@
 The Filipino Club Restaurant Website is designed for a restaurant that serves authentic Filipino dishes. Visitors can order online using the website.
 
 ### Links
-- Live Site URL: [Live Site](http://tfc-project.vercel.app/)
+- Live Site URL: [Live Site](https://thefilipinoclubresto.vercel.app/#menu)
 
 ### Built With
 - Semantic HTML5 markup
