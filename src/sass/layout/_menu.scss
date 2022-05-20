@@ -3,8 +3,9 @@
 // menu
 .menu__title {
     @include h.main-title;
+    font-size: clamp(1.2rem, 9vw, 3.052rem);
     color: h.$dark;
-    margin: 1em 0 -0.4em 0;
+    margin: 88px 0 -0.4em 0;
 }
 
 // navigation for food menu

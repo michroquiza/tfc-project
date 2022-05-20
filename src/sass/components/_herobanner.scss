@@ -11,6 +11,10 @@
     background-size: cover;
 }
 
+.hero-title-wrapper {
+    margin: 0 200px;
+}
+
 .hero {
     color: h.$light;
     text-align: center;
@@ -19,7 +23,6 @@
     &__title {
         font-family: h.$cursive;
         font-size: clamp(2.5rem, 10vw, 5rem);
-        // font-size: 4.375rem;
         letter-spacing: 0.125rem;
         margin: 0 auto;
 
@@ -31,8 +34,7 @@
 
     &__subtitle {
         font-size: 1.6rem;
-        color: #aaaaaa;
-        letter-spacing: 0.3rem;
+        color: h.$white;
         margin-top: -0.1em;
 
         @include h.responsive(mobile) {

@@ -42,7 +42,7 @@
         border-radius: 0.2em;
         background: h.$white;
         box-shadow: 5px 5px 8px 0px rgba(140, 140, 140, 0.2);
-        margin-bottom: 1em;
+        margin: -16px 0 24px 0;
         animation: fade 0.25s ease-in-out;
 
         @include h.responsive(mobile) {

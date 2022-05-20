@@ -17,12 +17,14 @@ header {
   background: #1e1e1e;
   color: #f2f2f2;
 }
+
 header .container {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
+
 header .logo {
   height: auto;
   position: absolute;
@@ -35,6 +37,7 @@ header .logo {
   background: #1e1e1e;
   color: #f2f2f2;
 }
+
 .topnav__list {
   list-style-type: none;
   display: flex;
@@ -42,19 +45,23 @@ header .logo {
   justify-content: flex-end;
   column-gap: 2em;
 }
+
 .topnav__link {
   font-weight: 500;
   color: #f2f2f2;
   text-decoration: none;
 }
+
 .topnav__link:hover {
   color: #46AD40;
   transition: 0.3s ease-out;
 }
+
 .topnav .shopping-bag {
   position: relative;
   cursor: pointer;
 }
+
 .topnav .icons {
   display: none;
 }
@@ -75,6 +82,7 @@ header .logo {
   position: relative;
   margin: 0.5em 2em;
 }
+
 .side-bag .close-styled {
   width: 2.1em;
   height: 2.1em;
@@ -86,48 +94,59 @@ header .logo {
   justify-content: center;
   align-items: center;
 }
+
 .side-bag .close-styled:hover {
   background-color: rgba(206, 206, 206, 0.6);
   transition: 0.3s ease-out;
 }
+
 .side-bag__title {
   margin: 2em 0;
 }
+
 .side-bag__order {
   display: flex;
   align-items: center;
   gap: 1em;
   margin-bottom: 2em;
 }
+
 .side-bag .scroll {
   height: 250px;
   overflow-y: auto;
   scrollbar-width: thin;
 }
+
 .side-bag .order-details {
   flex-grow: 2;
 }
+
 .side-bag .order-details__title {
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
 }
+
 .side-bag .order-details__quantity {
   margin-bottom: 1em;
 }
+
 .side-bag .order-details input {
   display: block;
   margin: 0.75rem 0;
   width: 60px;
 }
+
 .side-bag .order-img {
   width: 135px;
   height: 85px;
   object-fit: cover;
 }
+
 .side-bag span {
   width: 80px;
 }
+
 .side-bag .remove-btn {
   font-size: 0.85rem;
   background-color: transparent;
@@ -136,36 +155,44 @@ header .logo {
   padding: 0;
   margin: 0;
 }
+
 .side-bag .order-price {
   font-weight: 600;
 }
+
 .side-bag .separator {
   display: inline;
   height: 0.95rem;
   border: 1px solid rgba(0, 0, 0, 0.6);
   margin-right: 0.15rem;
 }
+
 .side-bag hr {
   border: 1px solid #DFDFDF;
   margin-bottom: 2em;
 }
+
 .side-bag .full-total {
   display: flex;
   column-gap: 8em;
   margin-bottom: 2.5em;
 }
+
 .side-bag .full-total .total-title {
   margin-left: 1em;
 }
+
 .side-bag .full-total .del-style {
   font-size: 1.15em;
   white-space: nowrap;
   margin-bottom: 0.7em;
 }
+
 .side-bag .full-total .total-style {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
 .side-bag .checkout {
   display: flex;
   justify-content: center;
@@ -175,9 +202,11 @@ header .logo {
   margin: 0 auto;
   border-radius: 0.15em;
 }
+
 .side-bag .checkout:hover {
   background-color: #383838;
 }
+
 .side-bag .checkout a {
   color: #f2f2f2;
   font-weight: 500;
@@ -202,11 +231,13 @@ header .logo {
   text-align: center;
   margin-bottom: 0;
 }
+
 .hero__title {
   font-size: 4.375rem;
   letter-spacing: 0.125rem;
   margin: 0 auto;
 }
+
 .hero__subtitle {
   font-size: 1.6rem;
   color: #aaaaaa;
@@ -224,6 +255,7 @@ header .logo {
   border: none;
   border-radius: 0.15em;
 }
+
 .book-btn:hover {
   background-color: #1e1e1e;
 }
@@ -250,6 +282,7 @@ header .logo {
 .modal-header h3 {
   text-align: center;
 }
+
 .modal-header .close-button-modal {
   color: silver;
   font-size: 2em;
@@ -296,6 +329,7 @@ select,
   border: none;
   background-color: #f2f2f2;
 }
+
 .inputs:focus {
   outline: none !important;
   border: 1px solid #21e916;
@@ -321,6 +355,7 @@ select,
   margin: 0 auto;
   border-radius: 0.15em;
 }
+
 .reserve-center .reserve:hover {
   background-color: #383838;
 }
@@ -352,6 +387,7 @@ select,
   margin-top: 1.5em;
   color: #1e1e1e;
 }
+
 .pop-dish__cards {
   display: flex;
   justify-content: center;
@@ -360,6 +396,7 @@ select,
   flex-wrap: wrap;
   margin: 0 auto;
 }
+
 .pop-dish__img {
   position: relative;
   width: 380px;
@@ -388,6 +425,7 @@ select,
   flex-wrap: wrap;
   margin-bottom: 3em;
 }
+
 .navmenu__link {
   display: block;
   color: #1e1e1e;
@@ -401,11 +439,13 @@ select,
   white-space: nowrap;
   border-radius: 0.2em;
 }
+
 .navmenu__link:hover {
   color: #1e1e1e;
   background-color: #e2e2e2;
   transition: 0.4s ease-out;
 }
+
 .navmenu .active {
   color: #f2f2f2;
   text-decoration: none;
@@ -420,6 +460,7 @@ select,
   flex-wrap: wrap;
   gap: 1em;
 }
+
 .menu-cards__menu-card {
   width: 285px;
   height: 355px;
@@ -429,6 +470,7 @@ select,
   margin-bottom: 1em;
   animation: fade 0.25s ease-in-out;
 }
+
 .menu-cards__img {
   width: 285px;
   height: 200px;
@@ -436,10 +478,12 @@ select,
   border-top-left-radius: 0.2em;
   border-top-right-radius: 0.2em;
 }
+
 .menu-cards__menu-name {
   text-align: center;
   margin-bottom: 1.5em;
 }
+
 .menu-cards__menu-info {
   display: flex;
   justify-content: center;
@@ -447,6 +491,7 @@ select,
   column-gap: 6em;
   margin-top: 3em;
 }
+
 .menu-cards .order-btn {
   color: #f2f2f2;
   font-weight: 500;
@@ -457,6 +502,7 @@ select,
   transition: 0.2s ease-out;
   letter-spacing: 0.03rem;
 }
+
 .menu-cards .order-btn:hover {
   background-color: #383838;
 }
@@ -465,10 +511,12 @@ select,
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 .booking-container {
   display: flex;
   justify-content: center;
@@ -485,10 +533,12 @@ select,
   color: #f2f2f2;
   text-align: center;
 }
+
 .booking__title {
   font-family: "Orelega One", cursive;
   font-size: 2.8rem;
 }
+
 .booking__content {
   font-size: 1.2rem;
   margin-bottom: 1.5em;
@@ -501,32 +551,39 @@ select,
   padding: 2.3em 0;
   background: #1e1e1e;
 }
+
 .footer-container .time,
 .footer-container .contact,
 .footer-container a {
   color: #f2f2f2;
   text-align: center;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.04rem;
   text-decoration: none;
 }
-.footer-container .time__time-title, .footer-container .time__contact-title,
+
+.footer-container .time__time-title,
+.footer-container .time__contact-title,
 .footer-container .contact__time-title,
 .footer-container .contact__contact-title,
 .footer-container a__time-title,
 .footer-container a__contact-title {
   margin-bottom: 1.4em;
 }
+
 .footer-container .day {
   opacity: 0.75;
 }
+
 .footer-container .day,
 .footer-container .hour {
   margin: 0.5em 0;
   letter-spacing: 0.04rem;
 }
+
 .footer-container .space {
   margin-bottom: 1.4em;
 }
+
 .footer-container .contact-info {
   display: flex;
   justify-content: center;
@@ -534,6 +591,7 @@ select,
   margin-bottom: 1em;
   gap: 0.5em;
 }
+
 .footer-container .phone,
 .footer-container .envelope {
   margin-right: 0.5em;
@@ -571,6 +629,7 @@ select,
 small {
   margin: 2rem 0;
 }
+
 small a {
   color: #f2f2f2;
   font-weight: 500;
