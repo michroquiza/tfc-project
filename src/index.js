@@ -70,26 +70,26 @@ close.addEventListener("click", e => {
 
 // order bag functionality
 function ready() {
-    var removeOrderButtons = document.getElementsByClassName("remove-btn");
-    for (var i = 0; i < removeOrderButtons.length; i++) {
-        var button = removeOrderButtons[i]
+    const removeOrderButtons = document.getElementsByClassName("remove-btn");
+    for (let i = 0; i < removeOrderButtons.length; i++) {
+        const button = removeOrderButtons[i]
         button.addEventListener('click', removeBagItem)
     }
-    var quantityInputs = document.getElementsByClassName("order-quantity");
-    for (var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[i];
+    const quantityInputs = document.getElementsByClassName("order-quantity");
+    for (let i = 0; i < quantityInputs.length; i++) {
+        const input = quantityInputs[i];
         input.addEventListener('change', quantityChanged);
     }
-    var addToBagButtons = document.getElementsByClassName("order-btn");
-    for (var i = 0; i < addToBagButtons.length; i++) {
-        var button = addToBagButtons[i];
+    const addToBagButtons = document.getElementsByClassName("order-btn");
+    for (let i = 0; i < addToBagButtons.length; i++) {
+        const button = addToBagButtons[i];
         button.addEventListener('click', addToBagClicked);
     }
     document.getElementsByClassName("checkout")[0].addEventListener('click', purchaseClicked);
 }
 
 function purchaseClicked() {
-    var bagItems = document.getElementsByClassName("side-bag__container")[0];
+    const bagItems = document.getElementsByClassName("side-bag__container")[0];
     while (bagItems.hasChildNodes()) {
         bagItems.removeChild(bagItems.firstChild);
         counter = 0;
@@ -99,11 +99,11 @@ function purchaseClicked() {
 }
 
 function addToBagClicked(event) {
-    var button = event.target;
-    var shopItem = button.parentElement.parentElement;
-    var title = shopItem.getElementsByClassName("menu-cards__menu-name")[0].innerText;
-    var price = shopItem.getElementsByClassName("menu-info__price")[0].innerText;
-    var imageSrc = shopItem.getElementsByClassName("menu-cards__img")[0].src;
+    const button = event.target;
+    const shopItem = button.parentElement.parentElement;
+    const title = shopItem.getElementsByClassName("menu-cards__menu-name")[0].innerText;
+    const price = shopItem.getElementsByClassName("menu-info__price")[0].innerText;
+    const imageSrc = shopItem.getElementsByClassName("menu-cards__img")[0].src;
     addItemToBag(title, price, imageSrc);
     updateTotal();
     // sideBag.style.right = "0";
@@ -112,17 +112,17 @@ function addToBagClicked(event) {
 }
 
 function addItemToBag(title, price, imageSrc) {
-    var bagOrder = document.createElement("div");
+    const bagOrder = document.createElement("div");
     bagOrder.classList.add("side-bag__order")
-    var bagItems = document.getElementsByClassName("side-bag__container")[0];
-    var bagItemsName = document.getElementsByClassName("order-details__title");
-    for (var i = 0; i < bagItemsName.length; i++) {
+    const bagItems = document.getElementsByClassName("side-bag__container")[0];
+    const bagItemsName = document.getElementsByClassName("order-details__title");
+    for (let i = 0; i < bagItemsName.length; i++) {
         if (bagItemsName[i].innerText == title) {
             alert("This item is already added to the bag");
             return;
         }
     }
-    var bagOrderContents = `
+    const bagOrderContents = `
     <img class="order-img" src="${imageSrc}" alt="">
     <div class="order-details">
         <h4 class="order-details__title">${title}</h4>
@@ -138,7 +138,7 @@ function addItemToBag(title, price, imageSrc) {
 }
 
 function quantityChanged(event) {
-    var input = event.target;
+    const input = event.target;
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
@@ -146,24 +146,24 @@ function quantityChanged(event) {
 }
 
 function removeBagItem(event) {
-    var buttonClicked = event.target;
+    const buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
 
     updateTotal();
 }
 
 function updateTotal() {
-    var bagItemContainer = document.getElementsByClassName("side-bag__container")[0];
-    var bagOrders = bagItemContainer.getElementsByClassName("side-bag__order");
-    var delivery = 70;
-    var subtotal = 0;
-    var total = 0;
-    for (var i = 0; i < bagOrders.length; i++) {
-        var bagOrder = bagOrders[i];
-        var priceElement = bagOrder.getElementsByClassName("order-price")[0];
-        var quantityElement = bagOrder.getElementsByClassName("order-quantity")[0];
-        var price = parseInt(priceElement.innerText.replace('₱', ''));
-        var quantity = quantityElement.value;
+    const bagItemContainer = document.getElementsByClassName("side-bag__container")[0];
+    const bagOrders = bagItemContainer.getElementsByClassName("side-bag__order");
+    let delivery = 70;
+    let subtotal = 0;
+    let total = 0;
+    for (let i = 0; i < bagOrders.length; i++) {
+        const bagOrder = bagOrders[i];
+        const priceElement = bagOrder.getElementsByClassName("order-price")[0];
+        const quantityElement = bagOrder.getElementsByClassName("order-quantity")[0];
+        const price = parseInt(priceElement.innerText.replace('₱', ''));
+        const quantity = quantityElement.value;
         subtotal = total + (price * quantity);
         total = total + delivery + (price * quantity);
 
