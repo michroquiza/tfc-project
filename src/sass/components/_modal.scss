@@ -1,4 +1,4 @@
-@use '../helpers'as h;
+@use '../helpers' as h;
 
 // reservation modal
 .modal {
@@ -12,7 +12,6 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transition: 200ms ease-in-out;
     transform: translate(-50%, -50%) scale(0);
     z-index: 999;
     background-color: h.$white;
